@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1E2A33">
+<link rel="icon" type="image/svg+xml" href="img/icon.svg">
+<title>Siam Servewell | Your sourcing partner for hotels, restaurants and event companies in Thailand</title>
+<meta name="description" content="Siam Servewell is your sourcing partner in Thailand for hotels, restaurants and event companies: buffet stations, chafing dishes, display, bars and serveware, quality-checked, quoted in baht and delivered.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#1E2A33; --green-d:#151F26; --green-l:#2A3A46;
+  --gold:#E3A02D; --gold-l:#F0BD63; --gold-d:#9A6612;
+  --cream:#F7F5F0; --paper:#FFFFFF; --ink:#1E2A33; --mute:#5B6770; --line:#E4DFD3;
+  --serif:'Poppins','Noto Sans Thai',system-ui,sans-serif;
+  --sans:'Inter','Noto Sans Thai',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.015em}
+h1{font-size:clamp(34px,4.9vw,56px);font-weight:700}
+h2{font-size:clamp(28px,3.5vw,40px);color:var(--green)}
+h3{font-size:21px;color:var(--green)}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:14px}
+.lead{font-size:18px;color:var(--mute);max-width:640px;margin-top:16px}
+section{padding:96px 0}
+.btn{display:inline-block;padding:14px 26px;border-radius:2px;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:var(--sans);transition:.2s}
+.btn-gold{background:var(--gold);color:var(--green)}.btn-gold:hover{background:var(--gold-l)}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff}.btn-line:hover{background:rgba(255,255,255,.1)}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-d)}
+
+/* language */
+.lang{display:flex;gap:2px;border:1px solid var(--line);border-radius:30px;padding:3px;background:#fff;margin-left:18px}
+.lang button{border:0;background:none;font:600 12px var(--sans);letter-spacing:.06em;padding:6px 11px;border-radius:30px;cursor:pointer;color:var(--mute)}
+.lang button.on{background:var(--green);color:#fff}
+.lang button:hover:not(.on){color:var(--gold)}
+html[lang=th] body{line-height:1.75}
+.hero .eyebrow,.aud .eyebrow,.contact .eyebrow{color:var(--gold)}
+html[lang=th] h1,html[lang=th] h2,html[lang=th] h3,html[lang=th] summary{line-height:1.3;letter-spacing:0}
+html[lang=th] .eyebrow,html[lang=th] .btn,html[lang=th] label,html[lang=th] .card .n{letter-spacing:.02em}
+html[lang=de] h1{font-size:clamp(32px,4.5vw,52px)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:block;flex-shrink:0;line-height:0}
+.logo img{height:50px;width:auto}
+nav ul{display:flex;gap:24px;list-style:none;align-items:center}
+nav a{white-space:nowrap;font-size:13.5px;text-decoration:none;color:var(--ink);font-weight:500}
+nav a:hover{color:var(--gold)}
+nav .btn{padding:10px 18px;font-size:12px;color:var(--green)}
+.burger{display:none;background:none;border:0;font-size:28px;color:var(--green);cursor:pointer}
+
+/* hero */
+.hero{background:var(--green);color:#fff;padding:0;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-top:84px;padding-bottom:84px}
+.hero p.sub{font-size:19px;color:#d5dce1;max-width:520px;margin:22px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero h1 em{font-style:normal;color:var(--gold-l)}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:230px 190px;gap:14px}
+.collage div{background:var(--paper);border-radius:3px;padding:14px;overflow:hidden}
+.collage div:first-child{grid-row:span 2}
+.collage img{width:100%;height:100%;object-fit:contain}
+.hero:before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border:1px solid rgba(184,137,60,.35);border-radius:50%}
+.proof{background:var(--green-d);color:#fff}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:30px;padding-bottom:30px;text-align:center}
+.proof strong{display:block;font-family:var(--serif);font-size:34px;color:var(--gold-l);font-weight:600;line-height:1}
+.proof span{font-size:13px;color:#b4bec6;letter-spacing:.04em}
+
+/* needs */
+.needs{background:var(--paper)}
+.need-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.need{display:block;text-decoration:none;background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold);padding:26px 26px 54px;border-radius:3px;position:relative;transition:.22s}
+.need h3{font-size:25px;line-height:1.15;margin-bottom:10px}
+.need p{font-size:14.5px;color:var(--mute)}
+.need:after{content:"\2192";position:absolute;right:24px;bottom:18px;font-size:22px;color:var(--gold);transition:.2s}
+.need:hover{background:var(--green);border-color:var(--green);border-left-color:var(--gold);transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,42,51,.18)}
+.need:hover h3{color:#fff}.need:hover p{color:#cdd5db}.need:hover:after{transform:translateX(4px);color:var(--gold-l)}
+.else{margin-top:26px;font-size:15px}
+.else a{color:var(--green);font-weight:600;border-bottom:1.5px solid var(--gold);text-decoration:none;padding-bottom:1px}
+
+/* range */
+.range{background:var(--cream)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(30,42,51,.12)}
+.card .ph{height:190px;padding:14px;background:#fff;border-bottom:1px solid var(--line);overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:contain}
+.card .tx{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:22px}
+.card p{font-size:14px;color:var(--mute);flex:1}
+.card .n{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);font-weight:600}
+.card a.more{font-size:13px;font-weight:600;color:var(--green);text-decoration:none;border-bottom:1.5px solid var(--gold);align-self:flex-start;padding-bottom:1px;margin-top:6px}
+.range-note{margin-top:34px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--green);color:#fff;padding:26px 32px;border-radius:3px}
+.range-note p{font-family:var(--serif);font-size:24px;max-width:700px;line-height:1.25}
+
+/* feature */
+.feature .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.feature .imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feature .imgs div{background:#fff;border:1px solid var(--line);padding:14px;height:240px;overflow:hidden}
+.feature .imgs div:first-child{grid-column:span 2;height:300px}
+.feature .imgs img{width:100%;height:100%;object-fit:contain}
+.ticks{list-style:none;margin:24px 0 30px}
+.ticks li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line)}
+.ticks li:before{content:"";position:absolute;left:4px;top:19px;width:12px;height:6px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+
+/* audience */
+.aud{background:var(--green);color:#fff}
+.aud h2{color:#fff}.aud .lead{color:#cdd5db}
+.aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18);margin-top:48px;border:1px solid rgba(255,255,255,.18)}
+.aud-grid div{background:var(--green);padding:30px 24px}
+.aud-grid h3{color:var(--gold-l);font-size:24px;margin-bottom:10px}
+.aud-grid p{font-size:14px;color:#cdd5db}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:48px;counter-reset:s}
+.step{position:relative;padding-top:58px}
+.step:before{counter-increment:s;content:"0" counter(s);position:absolute;top:0;left:0;font-family:var(--serif);font-size:52px;color:var(--gold);line-height:1}
+.step:after{content:"";position:absolute;top:26px;left:70px;right:0;height:1px;background:var(--line)}
+.step p{color:var(--mute);margin-top:8px;font-size:15px}
+
+/* why */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.why-grid div{background:var(--paper);padding:28px;border:1px solid var(--line);border-top:3px solid var(--gold)}
+.why-grid p{font-size:15px;color:var(--mute);margin-top:8px}
+
+/* forms */
+.contact{background:var(--green);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.contact h2{color:#fff}
+.contact .lead{color:#cdd5db}
+.contact ul{list-style:none;margin-top:30px;font-size:15px;color:#d5dce1}
+.contact li{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.contact li b{color:var(--gold-l);display:inline-block;width:92px;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.formbox{background:var(--paper);color:var(--ink);padding:34px;border-radius:3px}
+.tabs{display:flex;gap:0;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;background:none;border:0;padding:12px 8px;font:600 13px var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}
+.tabs button.on{color:var(--green);border-color:var(--gold)}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px 13px;border:1px solid #cfc7b3;border-radius:2px;font:15px var(--sans);background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chips label{margin:0;text-transform:none;letter-spacing:0;font-weight:500;font-size:13px;color:var(--ink);display:flex}
+.chips input{display:none}
+.chips span{padding:7px 13px;border:1px solid #cfc7b3;border-radius:30px;cursor:pointer;background:#fff;transition:.15s}
+.chips input:checked+span{background:var(--green);color:#fff;border-color:var(--green)}
+form .btn{margin-top:22px;width:100%}
+.fine{font-size:12px;color:var(--mute);margin-top:12px}
+.hide{display:none!important}
+.done{text-align:center}
+.done h3{margin-bottom:10px}
+.done pre{text-align:left;background:var(--cream);padding:16px;font:13px/1.5 var(--sans);white-space:pre-wrap;border:1px solid var(--line);margin:18px 0;border-radius:2px}
+.done .btn{width:auto;margin:4px}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:23px;color:var(--green);font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--gold);font-size:28px;line-height:1}
+details[open] summary:after{content:"–"}
+details p{color:var(--mute);margin-top:12px;max-width:760px}
+.faq{max-width:860px}
+
+footer{background:var(--green);color:#aab5bd;padding:46px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .flogo{height:34px;width:auto;margin-bottom:10px;display:block}
+footer a{color:var(--gold-l);text-decoration:none}
+
+@media(max-width:1200px){
+  nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--line);align-items:flex-start}
+  nav ul.open{display:flex}
+  .burger{display:block}
+  nav{order:3}
+  .lang{order:2;margin-left:auto;margin-right:8px}
+}
+@media(max-width:980px){
+  .hero .wrap,.feature .wrap,.contact .wrap{grid-template-columns:1fr;gap:40px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .need-grid,.aud-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:1fr}
+  .proof .wrap{grid-template-columns:repeat(2,1fr)}
+  section{padding:68px 0}
+}
+@media(max-width:560px){
+  .wrap{padding:0 16px}
+  .logo img{height:38px}
+  .lang{margin-right:2px;padding:2px}.lang button{padding:5px 8px;font-size:11px}
+  .burger{padding:0 4px}
+  .grid,.steps{grid-template-columns:1fr}
+  form .row{grid-template-columns:1fr}
+  .collage{grid-template-rows:190px 150px}
+  .formbox{padding:24px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Siam Servewell home"><img src="img/logo.svg" alt="Siam Servewell, Kitchen &amp; Buffet Equipment" width="243" height="50"></a>
+    <nav>
+      <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+      <ul id="menu">
+        <li><a href="#needs">What You Need</a></li>
+        <li><a href="#range">Our Range</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a class="btn btn-gold" href="#contact">Request a Quote</a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button>
+      <button type="button" data-lang="th" aria-pressed="false" lang="th">ไทย</button>
+      <button type="button" data-lang="de" aria-pressed="false" lang="de">DE</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Sourcing partner &middot; Thailand</p>
+      <h1><span>Your sourcing partner for</span> <em>hotels, restaurants and event companies.</em></h1>
+      <p class="sub">We find, quality-check and deliver the buffet, kitchen and service equipment your project needs, across Thailand. One partner, one quote, in baht.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#needs">Tell us what you need</a>
+        <a class="btn btn-line" href="#contact" data-tab="catalogue">Get the 2026/27 Catalogue</a>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div><img src="img/station.jpg" alt=""></div>
+      <div><img src="img/chafing2.jpg" alt=""></div>
+      <div><img src="img/display.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<div class="proof">
+  <div class="wrap">
+    <div><strong>2,600+</strong><span>products in the 2026/27 range</span></div>
+    <div><strong>17</strong><span>equipment categories</span></div>
+    <div><strong>Custom</strong><span>sizes, finishes &amp; branding</span></div>
+    <div><strong>THB</strong><span>quoted in baht, delivered in Thailand</span></div>
+  </div>
+</div>
+
+<!-- NEEDS -->
+<section class="needs" id="needs">
+  <div class="wrap">
+    <p class="eyebrow">Start here</p>
+    <h2>Where are you right now?</h2>
+    <p class="lead">Choose the closest match and we'll start the inquiry for you.</p>
+    <div class="need-grid">
+      <a class="need" href="#contact" data-sit="I'm opening a new hotel or restaurant"><h3>I'm opening a new hotel or restaurant</h3><p>Complete buffet, display and service equipment, matched and quoted as one package.</p></a>
+      <a class="need" href="#contact" data-sit="I'm renovating or refreshing my buffet"><h3>I'm renovating or refreshing my buffet</h3><p>New stations, display and serveware that lift the look without a full rebuild.</p></a>
+      <a class="need" href="#contact" data-sit="My buffet looks tired or service is slow"><h3>My buffet looks tired or service is slow</h3><p>Live cooking, heat holding and display that impress guests and speed up service.</p></a>
+      <a class="need" href="#contact" data-sit="I run events and catering"><h3>I run events and catering</h3><p>Foldable, transportable stations, tables and bars that load fast and look great on site.</p></a>
+      <a class="need" href="#contact" data-sit="I need to replace or top up items"><h3>I need to replace or top up items</h3><p>Have model codes or a photo? Send them and get a quick quote.</p></a>
+      <a class="need" href="#contact" data-sit="I need something custom"><h3>I need something custom</h3><p>Custom stations with your finishes, sizes and branding.</p></a>
+    </div>
+    <p class="else"><a href="#contact" data-sit="Something else">Something else? Tell us about it.</a></p>
+  </div>
+</section>
+
+<!-- RANGE -->
+<section class="range" id="range">
+  <div class="wrap">
+    <p class="eyebrow">Our Range</p>
+    <h2>Equipment for every part of your service.</h2>
+    <p class="lead">Two catalogues, eight families of equipment. Here is where most projects start. The full range, with specifications and options, comes with your quote.</p>
+
+    <div class="grid">
+      <article class="card"><div class="ph"><img src="img/chafing.jpg" alt="Induction chafing dish with wood-effect base" loading="lazy"></div>
+        <div class="tx"><span class="n">180+ models</span><h3>Chafing &amp; Hot Holding</h3><p>Induction, digital-control and classic chafing dishes in round, rectangular and GN sizes.</p><a class="more" href="#contact" data-need="Chafing & hot holding">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/station2.jpg" alt="Mobile live cooking station" loading="lazy"></div>
+        <div class="tx"><span class="n">140+ models</span><h3>Live Cooking Stations</h3><p>Foldable, mobile stations for wok, noodle, carving, dim sum, sushi and more.</p><a class="more" href="#contact" data-need="Live cooking stations">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/display.jpg" alt="Buffet display risers and stands" loading="lazy"></div>
+        <div class="tx"><span class="n">700+ models</span><h3>Buffet Display</h3><p>Risers, stands and display sets that give a buffet height, rhythm and a premium look.</p><a class="more" href="#contact" data-need="Buffet display & risers">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/bar.jpg" alt="Mobile bar counter" loading="lazy"></div>
+        <div class="tx"><span class="n">40+ models</span><h3>Mobile Bars &amp; Counters</h3><p>Event-ready bars and service counters in stone, wood, marble and metal finishes.</p><a class="more" href="#contact" data-need="Mobile bars & counters">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/table.jpg" alt="Buffet table with glass display" loading="lazy"></div>
+        <div class="tx"><span class="n">180+ models</span><h3>Buffet &amp; Cocktail Tables</h3><p>Folding, nesting and statement tables for banquets, receptions and cocktail events.</p><a class="more" href="#contact" data-need="Buffet & cocktail tables">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/lamp.jpg" alt="Copper heat lamp" loading="lazy"></div>
+        <div class="tx"><span class="n">170+ models</span><h3>Heat Lamps</h3><p>Hanging and stand heat lamps that keep food at temperature and match your interior.</p><a class="more" href="#contact" data-need="Heat lamps">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/wood.jpg" alt="Wooden crates and serveware" loading="lazy"></div>
+        <div class="tx"><span class="n">850+ models</span><h3>Serveware &amp; Cookware</h3><p>Wooden boards, trays, bowls, platters and enamel cookware for the finishing touch.</p><a class="more" href="#contact" data-need="Serveware & cookware">Ask for options</a></div></article>
+
+      <article class="card"><div class="ph"><img src="img/trolley.jpg" alt="Gold service trolley" loading="lazy"></div>
+        <div class="tx"><span class="n">80+ models</span><h3>Service Trolleys</h3><p>Bar, service and utility trolleys that work as hard as your team does.</p><a class="more" href="#contact" data-need="Service trolleys & carts">Ask for options</a></div></article>
+    </div>
+
+    <div class="range-note">
+      <p>Planning a new buffet, a renovation or an opening? Tell us the brief and we will propose a matched set.</p>
+      <a class="btn btn-gold" href="#contact">Start your brief</a>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE COOKING / CUSTOM -->
+<section class="feature" id="custom">
+  <div class="wrap">
+    <div class="imgs" aria-hidden="true">
+      <div><img src="img/station.jpg" alt=""></div>
+      <div><img src="img/wok.jpg" alt=""></div>
+      <div><img src="img/cocktail2.jpg" alt=""></div>
+    </div>
+    <div>
+      <p class="eyebrow">Made for your venue</p>
+      <h2>Live cooking stations, built around your concept.</h2>
+      <p class="lead">A station that matches your interior does more for guest perception than any single dish. Our foldable and mobile stations are customised per project.</p>
+      <ul class="ticks">
+        <li>Panels and patterns to match your design language</li>
+        <li>Top materials and colours chosen with your designer</li>
+        <li>Your branding and custom sizes on request</li>
+        <li>Wok, noodle, griddle, carving, sushi, dim sum and more</li>
+      </ul>
+      <a class="btn btn-green" href="#contact" data-need="Live cooking stations">Discuss a custom station</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="aud" id="clients">
+  <div class="wrap">
+    <p class="eyebrow">Who we work with</p>
+    <h2>One sourcing partner, whatever you run.</h2>
+    <p class="lead">Hotels, restaurants and event companies across Thailand rely on us to find the right equipment and get it delivered.</p>
+    <div class="aud-grid">
+      <div><h3>Hotels &amp; Resorts</h3><p>Breakfast and banquet buffets, new openings, renovations and seasonal refreshes.</p></div>
+      <div><h3>Restaurants</h3><p>Live stations, display and serveware that lift presentation and speed up service.</p></div>
+      <div><h3>Event &amp; Catering Companies</h3><p>Foldable, transportable equipment sets that load quickly and look great on site.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">How we start</p>
+    <h2>From your situation to a delivered buffet.</h2>
+    <div class="steps">
+      <div class="step"><h3>Tell us where you are</h3><p>Share a few details about your project, or send model codes.</p></div>
+      <div class="step"><h3>We talk it through</h3><p>A short call or message to understand your venue, style, quantities and budget.</p></div>
+      <div class="step"><h3>You get a clear quote</h3><p>Options and pricing in baht, with lead times and customisation, before you commit to anything.</p></div>
+      <div class="step"><h3>We source, check, deliver</h3><p>We handle manufacturer sourcing, quality checks and logistics, so what arrives is what you approved.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <p class="eyebrow">Why Siam Servewell</p>
+    <h2>A sourcing partner, not just a price list.</h2>
+    <div class="why-grid">
+      <div><h3>Depth of range</h3><p>Over 2,600 products across buffet, display, bars, tables and service equipment, so one supplier covers the whole project.</p></div>
+      <div><h3>Quality control</h3><p>We source from established manufacturers and check quality before goods reach you.</p></div>
+      <div><h3>Backed by hospitality operators</h3><p>Siam Servewell is a sourcing service by M Hospitality Thailand, a team with experience from five-star hotels to delivery kitchens.</p></div>
+    </div>
+    <p class="else"><a href="https://www.mhospitality-thailand.com" target="_blank" rel="noopener">Learn more about M Hospitality Thailand</a></p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap faq">
+    <p class="eyebrow">FAQ</p>
+    <h2>Common questions</h2>
+    <details><summary>Can I see prices?</summary><p>Pricing, lead times and options are quoted per project, because finishes, quantities and customisation change the price. Send your brief and we reply with a quote in baht.</p></details>
+    <details><summary>How do I order a specific item?</summary><p>Request the catalogue, then send us the model codes and quantities you need. The codes keep every order unambiguous.</p></details>
+    <details><summary>Can you customise sizes, finishes or branding?</summary><p>Yes. Panels, patterns, top materials, colours and branding can be customised per project, and custom sizes are available on request, especially for buffet stations.</p></details>
+    <details><summary>Who do you supply?</summary><p>Hotels, restaurants and event companies across Thailand, as well as designers and contractors equipping them.</p></details>
+    <details><summary>Who is behind Siam Servewell?</summary><p>Siam Servewell is a sourcing service by M Hospitality Thailand.</p></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Let's talk</p>
+      <h2>Tell us about your project.</h2>
+      <p class="lead">Share a few details and we'll get back to you. Prefer email? Write to us directly.</p>
+      <ul>
+        <li><b>Email</b> siamservewell@gmail.com</li>
+        <li><b>Web</b> siamservewell.com</li>
+        <li><b>Part of</b> M Hospitality Thailand</li>
+      </ul>
+    </div>
+
+    <div class="formbox">
+      <div class="tabs" role="tablist">
+        <button id="tab-quote" class="on" type="button">Request a quote</button>
+        <button id="tab-cat" type="button">Get the catalogue</button>
+      </div>
+
+      <form id="form" novalidate>
+        <div class="row">
+          <div><label for="name">Name *</label><input id="name" required autocomplete="name"></div>
+          <div><label for="company">Company *</label><input id="company" required autocomplete="organization"></div>
+        </div>
+        <div class="row">
+          <div><label for="email">Work email *</label><input id="email" type="email" required autocomplete="email"></div>
+          <div><label for="phone">Phone / LINE</label><input id="phone" autocomplete="tel"></div>
+        </div>
+        <label for="sit">Your situation</label>
+        <select id="sit">
+          <option>Choose one</option>
+          <option>I'm opening a new hotel or restaurant</option>
+          <option>I'm renovating or refreshing my buffet</option>
+          <option>My buffet looks tired or service is slow</option>
+          <option>I run events and catering</option>
+          <option>I need to replace or top up items</option>
+          <option>I need something custom</option>
+          <option>Something else</option>
+        </select>
+        <label for="type">I am a</label>
+        <select id="type">
+          <option>Hotel or resort</option><option>Restaurant group</option><option>Event / catering company</option><option>Designer or contractor</option><option>Other</option>
+        </select>
+        <label>I am interested in</label>
+        <div class="chips" id="chips">
+          <label><input type="checkbox" value="Chafing & hot holding"><span>Chafing &amp; hot holding</span></label>
+          <label><input type="checkbox" value="Live cooking stations"><span>Live cooking stations</span></label>
+          <label><input type="checkbox" value="Buffet display & risers"><span>Buffet display</span></label>
+          <label><input type="checkbox" value="Mobile bars & counters"><span>Bars &amp; counters</span></label>
+          <label><input type="checkbox" value="Buffet & cocktail tables"><span>Tables</span></label>
+          <label><input type="checkbox" value="Heat lamps"><span>Heat lamps</span></label>
+          <label><input type="checkbox" value="Serveware & cookware"><span>Serveware &amp; cookware</span></label>
+          <label><input type="checkbox" value="Service trolleys & carts"><span>Trolleys</span></label>
+        </div>
+        <div id="quoteOnly">
+          <label for="when">Timeline</label>
+          <select id="when"><option>Not sure yet</option><option>Within 1 month</option><option>1 to 3 months</option><option>3 to 6 months</option><option>6+ months</option></select>
+          <label for="msg">Project details</label>
+          <textarea id="msg" rows="3" placeholder="Venue, style, quantities, or model codes if you have them"></textarea>
+        </div>
+        <button class="btn btn-gold" id="submit" type="submit">Send my request</button>
+        <p class="fine">We reply within one business day. We use your details only to respond to this request.</p>
+      </form>
+
+      <div class="done hide" id="done">
+        <h3>Your request is ready</h3>
+        <p>Send it to our team by email, or copy it below.</p>
+        <pre id="out" data-noi="1"></pre>
+        <a class="btn btn-green" id="mail" href="#">Open in email</a>
+        <button class="btn btn-gold" id="copy" type="button">Copy text</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><img class="flogo" src="img/logo-reversed.svg" alt="Siam Servewell" width="165" height="34"><br><span>Kitchen &amp; hospitality sourcing &middot; A sourcing service by M Hospitality Thailand</span></div>
+    <div>siamservewell@gmail.com &middot; <a href="#top">siamservewell.com</a><br><span>&copy; 2026 Siam Servewell. Specifications may vary slightly by production batch.</span></div>
+  </div>
+</footer>
+
+<script>
+var I18N={
+th:{
+"Our Range":"สินค้าของเรา","Live Cooking":"ไลฟ์คุกกิ้ง","Who We Serve":"ลูกค้าของเรา","How It Works":"ขั้นตอนการทำงาน","Why Siam Servewell":"ทำไมต้อง Siam Servewell","FAQ":"คำถามที่พบบ่อย","Request a Quote":"ขอใบเสนอราคา",
+"Kitchen & Hospitality Sourcing":"จัดหาอุปกรณ์ครัวและโรงแรม",
+"Buffet equipment · Thailand":"อุปกรณ์บุฟเฟ่ต์ · ประเทศไทย",
+"Buffet equipment for hotels that":"อุปกรณ์บุฟเฟ่ต์สำหรับโรงแรมที่","set the standard.":"ยกระดับมาตรฐาน",
+"Chafing dishes, live cooking stations, display, bars and serveware, sourced, quality-checked and delivered across Thailand. One partner, one quote, in baht.":"เครื่องอุ่นอาหาร สถานีปรุงอาหารสด อุปกรณ์จัดแสดง บาร์ และภาชนะเสิร์ฟ คัดสรร ตรวจสอบคุณภาพ และจัดส่งทั่วประเทศไทย ผู้ให้บริการรายเดียว ใบเสนอราคาเดียว เป็นเงินบาท",
+"Get the 2026/27 Catalogue":"รับแคตตาล็อก 2026/27",
+"products in the 2026/27 range":"รายการสินค้าในคอลเลกชัน 2026/27","equipment categories":"หมวดหมู่อุปกรณ์","Custom":"ปรับแต่งได้","sizes, finishes & branding":"ขนาด วัสดุผิว และแบรนด์ดิ้ง","quoted in baht, delivered in Thailand":"เสนอราคาเป็นเงินบาท จัดส่งในประเทศไทย",
+"Everything a buffet needs, from one source.":"ทุกอย่างที่บุฟเฟ่ต์ต้องการ จากแหล่งเดียว",
+"Two catalogues, eight families of equipment. Here is where most projects start. The full range, with specifications and options, comes with your quote.":"แคตตาล็อกสองเล่ม อุปกรณ์แปดกลุ่มหลัก นี่คือจุดเริ่มต้นของโครงการส่วนใหญ่ ส่วนสินค้าทั้งหมดพร้อมสเปกและตัวเลือกจะแนบไปกับใบเสนอราคาของคุณ",
+"Chafing & Hot Holding":"เครื่องอุ่นอาหารและรักษาความร้อน","Induction, digital-control and classic chafing dishes in round, rectangular and GN sizes.":"เครื่องอุ่นอาหารแบบเหนี่ยวนำ ระบบควบคุมดิจิทัล และแบบคลาสสิก ทั้งทรงกลม ทรงเหลี่ยม และขนาด GN",
+"Ask for options":"สอบถามตัวเลือก",
+"Live Cooking Stations":"สถานีปรุงอาหารสด","Foldable, mobile stations for wok, noodle, carving, dim sum, sushi and more.":"สถานีแบบพับเก็บและเคลื่อนย้ายได้ สำหรับผัดกระทะ ก๋วยเตี๋ยว เสิร์ฟเนื้อตัดสด ติ่มซำ ซูชิ และอื่นๆ",
+"Buffet Display":"อุปกรณ์จัดแสดงบุฟเฟ่ต์","Risers, stands and display sets that give a buffet height, rhythm and a premium look.":"ชั้นยกระดับ ขาตั้ง และชุดจัดแสดงที่ให้บุฟเฟ่ต์มีมิติ จังหวะ และความพรีเมียม",
+"Mobile Bars & Counters":"บาร์เคลื่อนที่และเคาน์เตอร์","Event-ready bars and service counters in stone, wood, marble and metal finishes.":"บาร์และเคาน์เตอร์บริการพร้อมใช้งานอีเวนต์ ผิวหิน ไม้ หินอ่อน และโลหะ",
+"Buffet & Cocktail Tables":"โต๊ะบุฟเฟ่ต์และโต๊ะค็อกเทล","Folding, nesting and statement tables for banquets, receptions and cocktail events.":"โต๊ะพับ โต๊ะซ้อนเก็บ และโต๊ะดีไซน์เด่น สำหรับงานเลี้ยง งานต้อนรับ และงานค็อกเทล",
+"Heat Lamps":"โคมไฟอุ่นอาหาร","Hanging and stand heat lamps that keep food at temperature and match your interior.":"โคมไฟอุ่นอาหารแบบแขวนและตั้งโต๊ะ รักษาอุณหภูมิอาหารและเข้ากับการตกแต่งของคุณ",
+"Serveware & Cookware":"ภาชนะเสิร์ฟและเครื่องครัว","Wooden boards, trays, bowls, platters and enamel cookware for the finishing touch.":"เขียงไม้ ถาด ชาม จานเสิร์ฟ และหม้อเคลือบ เพื่อสัมผัสสุดท้ายที่สมบูรณ์แบบ",
+"Service Trolleys":"รถเข็นบริการ","Bar, service and utility trolleys that work as hard as your team does.":"รถเข็นบาร์ รถเข็นเสิร์ฟ และรถเข็นอเนกประสงค์ ที่ทำงานหนักเท่าทีมของคุณ",
+"Planning a new buffet, a renovation or an opening? Tell us the brief and we will propose a matched set.":"กำลังวางแผนบุฟเฟ่ต์ใหม่ ปรับปรุง หรือเปิดโครงการใหม่? บอกความต้องการแล้วเราจะเสนอชุดอุปกรณ์ที่เข้ากัน","Start your brief":"เริ่มส่งความต้องการ",
+"Made for your venue":"ออกแบบให้เข้ากับสถานที่ของคุณ","Live cooking stations, built around your concept.":"สถานีปรุงอาหารสด สร้างตามคอนเซ็ปต์ของคุณ",
+"A station that matches your interior does more for guest perception than any single dish. Our foldable and mobile stations are customised per project.":"สถานีที่เข้ากับการตกแต่งสร้างความประทับใจให้แขกได้มากกว่าอาหารจานใดจานหนึ่ง สถานีแบบพับเก็บและเคลื่อนย้ายได้ของเราปรับแต่งตามแต่ละโครงการ",
+"Panels and patterns to match your design language":"แผงและลวดลายที่เข้ากับภาษาการออกแบบของคุณ","Top materials and colours chosen with your designer":"วัสดุท็อปและสีที่เลือกร่วมกับนักออกแบบของคุณ","Your branding and custom sizes on request":"ใส่แบรนด์ของคุณและทำขนาดพิเศษได้ตามต้องการ","Wok, noodle, griddle, carving, sushi, dim sum and more":"ผัดกระทะ ก๋วยเตี๋ยว เตาแบน เสิร์ฟเนื้อตัดสด ซูชิ ติ่มซำ และอื่นๆ","Discuss a custom station":"ปรึกษาสถานีสั่งทำ",
+"Who we serve":"ลูกค้าของเรา","Built for professional hospitality buyers.":"สร้างมาเพื่อมืออาชีพด้านธุรกิจบริการ","We supply the people who run buffets every day and the people who equip them.":"เราจัดหาให้ทั้งผู้ที่ดูแลบุฟเฟ่ต์ทุกวัน และผู้ที่จัดเตรียมอุปกรณ์ให้",
+"Hotels & Resorts":"โรงแรมและรีสอร์ท","Breakfast and banquet buffets, new openings, renovations and seasonal refreshes.":"บุฟเฟ่ต์อาหารเช้าและงานเลี้ยง การเปิดโครงการใหม่ การปรับปรุง และการรีเฟรชตามฤดูกาล",
+"Restaurants":"ร้านอาหาร","Live stations, display and serveware that lift presentation and speed up service.":"สถานีปรุงสด อุปกรณ์จัดแสดง และภาชนะเสิร์ฟ ที่ยกระดับการนำเสนอและเพิ่มความเร็วในการบริการ",
+"Event & Catering Companies":"บริษัทอีเวนต์และเคเทอริ่ง","Foldable, transportable equipment sets that load quickly and look great on site.":"ชุดอุปกรณ์พับเก็บและขนย้ายง่าย โหลดเร็ว และดูดีเมื่อติดตั้งหน้างาน",
+"Designers & Contractors":"นักออกแบบและผู้รับเหมา","Custom finishes and matched sets for FF&E and OS&E packages.":"วัสดุผิวสั่งทำและชุดอุปกรณ์ที่เข้ากัน สำหรับงาน FF&E และ OS&E",
+"How it works":"ขั้นตอนการทำงาน","From brief to buffet in three steps.":"จากความต้องการสู่บุฟเฟ่ต์ ใน 3 ขั้นตอน",
+"Share your brief":"ส่งความต้องการของคุณ","Tell us your venue, the style you want and the quantities. Have model codes already? Send them as they are.":"บอกเราเกี่ยวกับสถานที่ สไตล์ที่ต้องการ และจำนวน หากมีรหัสรุ่นแล้ว ส่งมาได้เลย",
+"Get a tailored quote":"รับใบเสนอราคาเฉพาะโครงการ","We propose options and quote in baht, with lead times and customisation. Pricing is per project, never a one-size list.":"เราเสนอตัวเลือกพร้อมราคาเป็นเงินบาท ระยะเวลาจัดส่ง และการปรับแต่ง ราคาคิดตามโครงการ ไม่ใช่ราคาตายตัวสำหรับทุกงาน",
+"We source, check, deliver":"เราจัดหา ตรวจสอบ และจัดส่ง","We handle manufacturer sourcing, quality checks and logistics, so what arrives is what you approved.":"เราดูแลการจัดหาจากผู้ผลิต การตรวจสอบคุณภาพ และโลจิสติกส์ เพื่อให้สิ่งที่ได้รับตรงกับที่คุณอนุมัติ",
+"A sourcing partner, not just a price list.":"พันธมิตรด้านการจัดหา ไม่ใช่แค่รายการราคา",
+"Depth of range":"สินค้าหลากหลายครบวงจร","Over 2,600 products across buffet, display, bars, tables and service equipment, so one supplier covers the whole project.":"สินค้ากว่า 2,600 รายการ ครอบคลุมบุฟเฟ่ต์ อุปกรณ์จัดแสดง บาร์ โต๊ะ และอุปกรณ์บริการ ผู้จัดหารายเดียวดูแลได้ทั้งโครงการ",
+"Quality control":"การควบคุมคุณภาพ","We source from established manufacturers and check quality before goods reach you.":"เราจัดหาจากผู้ผลิตที่น่าเชื่อถือ และตรวจสอบคุณภาพก่อนสินค้าถึงมือคุณ",
+"Local and simple":"ง่ายและอยู่ใกล้คุณ","Quotes in baht, logistics handled, and a Thai-based team backed by M Hospitality Thailand.":"เสนอราคาเป็นเงินบาท ดูแลโลจิสติกส์ และทีมงานในประเทศไทยที่หนุนหลังโดย M Hospitality Thailand",
+"Common questions":"คำถามที่พบบ่อย",
+"Can I see prices?":"ดูราคาได้ไหม","Pricing, lead times and options are quoted per project, because finishes, quantities and customisation change the price. Send your brief and we reply with a quote in baht.":"ราคา ระยะเวลาจัดส่ง และตัวเลือกจะเสนอตามแต่ละโครงการ เพราะวัสดุผิว จำนวน และการปรับแต่งมีผลต่อราคา ส่งความต้องการมาแล้วเราจะตอบกลับพร้อมใบเสนอราคาเป็นเงินบาท",
+"How do I order a specific item?":"สั่งสินค้ารุ่นที่ต้องการอย่างไร","Request the catalogue, then send us the model codes and quantities you need. The codes keep every order unambiguous.":"ขอรับแคตตาล็อก แล้วส่งรหัสรุ่นและจำนวนที่ต้องการมาให้เรา รหัสรุ่นช่วยให้ทุกคำสั่งซื้อชัดเจนไม่คลาดเคลื่อน",
+"Can you customise sizes, finishes or branding?":"ปรับแต่งขนาด วัสดุผิว หรือแบรนด์ดิ้งได้ไหม","Yes. Panels, patterns, top materials, colours and branding can be customised per project, and custom sizes are available on request, especially for buffet stations.":"ได้ แผง ลวดลาย วัสดุท็อป สี และแบรนด์ดิ้ง ปรับแต่งได้ตามโครงการ และมีขนาดพิเศษตามคำขอ โดยเฉพาะสถานีบุฟเฟ่ต์",
+"Who do you supply?":"คุณจัดหาสินค้าให้ใคร","Hotels, restaurants and event companies across Thailand, as well as designers and contractors equipping them.":"โรงแรม ร้านอาหาร และบริษัทอีเวนต์ทั่วประเทศไทย รวมถึงนักออกแบบและผู้รับเหมาที่จัดเตรียมอุปกรณ์ให้",
+"Who is behind Siam Servewell?":"ใครอยู่เบื้องหลัง Siam Servewell","Siam Servewell is a sourcing service by M Hospitality Thailand.":"Siam Servewell เป็นบริการจัดหาสินค้าโดย M Hospitality Thailand",
+"Let's talk":"คุยกับเรา","Tell us about your project.":"เล่าโครงการของคุณให้เราฟัง","Request a quote for a project, or get the 2026/27 catalogues to browse the full range yourself.":"ขอใบเสนอราคาสำหรับโครงการ หรือรับแคตตาล็อก 2026/27 เพื่อดูสินค้าทั้งหมดด้วยตัวเอง",
+"Email":"อีเมล","Web":"เว็บไซต์","Part of":"ในเครือ",
+"Request a quote":"ขอใบเสนอราคา","Get the catalogue":"รับแคตตาล็อก",
+"Name *":"ชื่อ *","Company *":"บริษัท *","Work email *":"อีเมลที่ทำงาน *","Phone / LINE":"โทรศัพท์ / LINE","I am a":"ฉันเป็น",
+"Hotel or resort":"โรงแรมหรือรีสอร์ท","Restaurant group":"กลุ่มร้านอาหาร","Event / catering company":"บริษัทอีเวนต์ / เคเทอริ่ง","Designer or contractor":"นักออกแบบหรือผู้รับเหมา","Other":"อื่นๆ",
+"I am interested in":"สนใจ",
+"Chafing & hot holding":"เครื่องอุ่นอาหาร","Buffet display":"อุปกรณ์จัดแสดง","Serveware & cookware":"ภาชนะเสิร์ฟและเครื่องครัว","Live cooking stations":"สถานีปรุงอาหารสด","Bars & counters":"บาร์และเคาน์เตอร์","Tables":"โต๊ะ","Heat lamps":"โคมไฟอุ่นอาหาร","Trolleys":"รถเข็น",
+"Timeline":"ระยะเวลา","Not sure yet":"ยังไม่แน่ใจ","Within 1 month":"ภายใน 1 เดือน","1 to 3 months":"1-3 เดือน","3 to 6 months":"3-6 เดือน","6+ months":"มากกว่า 6 เดือน",
+"Project size":"ขนาดโครงการ","Small top-up order":"สั่งเพิ่มจำนวนน้อย","One venue or event":"หนึ่งสถานที่หรืออีเวนต์","Several venues / full opening":"หลายสถานที่ / เปิดโครงการเต็มรูปแบบ",
+"Project details":"รายละเอียดโครงการ",
+"Send my request":"ส่งคำขอของฉัน","Send me the catalogue":"ส่งแคตตาล็อกให้ฉัน","We reply within one business day. We use your details only to respond to this request.":"เราตอบกลับภายใน 1 วันทำการ และใช้ข้อมูลของคุณเพื่อตอบคำขอนี้เท่านั้น",
+"Your request is ready":"คำขอของคุณพร้อมแล้ว","Send it to our team by email, or copy it below.":"ส่งถึงทีมของเราทางอีเมล หรือคัดลอกด้านล่าง","Open in email":"เปิดในอีเมล","Copy text":"คัดลอกข้อความ","Copied":"คัดลอกแล้ว","Select the text to copy":"เลือกข้อความเพื่อคัดลอก",
+"Kitchen & hospitality sourcing · A sourcing service by M Hospitality Thailand":"จัดหาอุปกรณ์ครัวและโรงแรม · บริการจัดหาสินค้าโดย M Hospitality Thailand",
+"© 2026 Siam Servewell. Specifications may vary slightly by production batch.":"© 2026 Siam Servewell ข้อมูลจำเพาะอาจแตกต่างเล็กน้อยตามล็อตการผลิต",
+"@placeholder:Venue, style, quantities, or model codes if you have them":"สถานที่ สไตล์ จำนวน หรือรหัสรุ่น (หากมี)",
+"@title":"Siam Servewell | อุปกรณ์บุฟเฟ่ต์และสถานีปรุงอาหารสดสำหรับโรงแรมในประเทศไทย",
+"@desc":"Siam Servewell จัดหาเครื่องอุ่นอาหาร สถานีปรุงอาหารสด อุปกรณ์จัดแสดงบุฟเฟ่ต์ บาร์ และภาชนะเสิร์ฟ ให้โรงแรม ร้านอาหาร และบริษัทอีเวนต์ทั่วประเทศไทย เสนอราคาเป็นเงินบาท ปรับแต่งได้ ตรวจสอบคุณภาพก่อนส่งมอบ",
+"@models":"รุ่น",
+"@alt:Induction chafing dish with wood-effect base":"เครื่องอุ่นอาหารแบบเหนี่ยวนำ ฐานลายไม้","@alt:Mobile live cooking station":"สถานีปรุงอาหารสดแบบเคลื่อนย้ายได้","@alt:Buffet display risers and stands":"ชั้นยกระดับและขาตั้งจัดแสดงบุฟเฟ่ต์","@alt:Mobile bar counter":"เคาน์เตอร์บาร์เคลื่อนที่","@alt:Buffet table with glass display":"โต๊ะบุฟเฟ่ต์พร้อมช่องกระจก","@alt:Copper heat lamp":"โคมไฟอุ่นอาหารสีทองแดง","@alt:Wooden crates and serveware":"ลังไม้และภาชนะเสิร์ฟ","@alt:Gold service trolley":"รถเข็นบริการสีทอง"
+},
+de:{
+"Our Range":"Sortiment","Live Cooking":"Live-Cooking","Who We Serve":"Für wen wir arbeiten","How It Works":"So funktioniert's","Why Siam Servewell":"Warum Siam Servewell","FAQ":"FAQ","Request a Quote":"Angebot anfragen",
+"Kitchen & Hospitality Sourcing":"Küchen- & Hospitality-Beschaffung",
+"Buffet equipment · Thailand":"Buffet-Ausstattung · Thailand",
+"Buffet equipment for hotels that":"Buffet-Ausstattung für Hotels, die","set the standard.":"Maßstäbe setzen.",
+"Chafing dishes, live cooking stations, display, bars and serveware, sourced, quality-checked and delivered across Thailand. One partner, one quote, in baht.":"Chafing Dishes, Live-Cooking-Stationen, Buffet-Display, Bars und Servierware: beschafft, qualitätsgeprüft und geliefert in ganz Thailand. Ein Partner, ein Angebot, in Baht.",
+"Get the 2026/27 Catalogue":"Katalog 2026/27 anfordern",
+"products in the 2026/27 range":"Produkte im Sortiment 2026/27","equipment categories":"Gerätekategorien","Custom":"Individuell","sizes, finishes & branding":"Größen, Oberflächen & Branding","quoted in baht, delivered in Thailand":"Preise in Baht, Lieferung in Thailand",
+"Everything a buffet needs, from one source.":"Alles, was ein Buffet braucht, aus einer Hand.",
+"Two catalogues, eight families of equipment. Here is where most projects start. The full range, with specifications and options, comes with your quote.":"Zwei Kataloge, acht Gerätefamilien. Hier beginnen die meisten Projekte. Das gesamte Sortiment mit Spezifikationen und Optionen erhalten Sie mit Ihrem Angebot.",
+"Chafing & Hot Holding":"Chafing & Warmhalten","Induction, digital-control and classic chafing dishes in round, rectangular and GN sizes.":"Induktions-, digital geregelte und klassische Chafing Dishes in rund, rechteckig und GN-Größen.",
+"Ask for options":"Optionen anfragen",
+"Live Cooking Stations":"Live-Cooking-Stationen","Foldable, mobile stations for wok, noodle, carving, dim sum, sushi and more.":"Klappbare, mobile Stationen für Wok, Nudeln, Tranchieren, Dim Sum, Sushi und mehr.",
+"Buffet Display":"Buffet-Display","Risers, stands and display sets that give a buffet height, rhythm and a premium look.":"Etagèren, Ständer und Display-Sets, die einem Buffet Höhe, Rhythmus und Wertigkeit geben.",
+"Mobile Bars & Counters":"Mobile Bars & Theken","Event-ready bars and service counters in stone, wood, marble and metal finishes.":"Eventfertige Bars und Servicetheken in Stein-, Holz-, Marmor- und Metalloptik.",
+"Buffet & Cocktail Tables":"Buffet- & Cocktailtische","Folding, nesting and statement tables for banquets, receptions and cocktail events.":"Klapp-, Stapel- und Designtische für Bankette, Empfänge und Cocktailveranstaltungen.",
+"Heat Lamps":"Wärmelampen","Hanging and stand heat lamps that keep food at temperature and match your interior.":"Hänge- und Standwärmelampen, die Speisen auf Temperatur halten und zu Ihrem Interieur passen.",
+"Serveware & Cookware":"Servierware & Kochgeschirr","Wooden boards, trays, bowls, platters and enamel cookware for the finishing touch.":"Holzbretter, Tablette, Schalen, Platten und emailliertes Kochgeschirr für den letzten Schliff.",
+"Service Trolleys":"Servierwagen","Bar, service and utility trolleys that work as hard as your team does.":"Bar-, Service- und Transportwagen, die so hart arbeiten wie Ihr Team.",
+"Planning a new buffet, a renovation or an opening? Tell us the brief and we will propose a matched set.":"Neues Buffet, Renovierung oder Eröffnung geplant? Schildern Sie uns Ihr Briefing, wir stellen ein passendes Set zusammen.","Start your brief":"Briefing starten",
+"Made for your venue":"Für Ihr Haus gemacht","Live cooking stations, built around your concept.":"Live-Cooking-Stationen, passend zu Ihrem Konzept.",
+"A station that matches your interior does more for guest perception than any single dish. Our foldable and mobile stations are customised per project.":"Eine Station, die zu Ihrem Interieur passt, prägt den Eindruck der Gäste mehr als jedes einzelne Gericht. Unsere klappbaren, mobilen Stationen werden projektbezogen angepasst.",
+"Panels and patterns to match your design language":"Paneele und Muster passend zu Ihrer Designsprache","Top materials and colours chosen with your designer":"Arbeitsplatten und Farben in Abstimmung mit Ihrem Designer","Your branding and custom sizes on request":"Ihr Branding und Sondergrößen auf Anfrage","Wok, noodle, griddle, carving, sushi, dim sum and more":"Wok, Nudeln, Plancha, Tranchieren, Sushi, Dim Sum und mehr","Discuss a custom station":"Individuelle Station besprechen",
+"Who we serve":"Für wen wir arbeiten","Built for professional hospitality buyers.":"Für professionelle Einkäufer der Hospitality-Branche.","We supply the people who run buffets every day and the people who equip them.":"Wir beliefern die Menschen, die täglich Buffets betreiben, und jene, die sie ausstatten.",
+"Hotels & Resorts":"Hotels & Resorts","Breakfast and banquet buffets, new openings, renovations and seasonal refreshes.":"Frühstücks- und Bankettbuffets, Neueröffnungen, Renovierungen und saisonale Auffrischungen.",
+"Restaurants":"Restaurants","Live stations, display and serveware that lift presentation and speed up service.":"Live-Stationen, Display und Servierware, die die Präsentation aufwerten und den Service beschleunigen.",
+"Event & Catering Companies":"Event- & Catering-Unternehmen","Foldable, transportable equipment sets that load quickly and look great on site.":"Klappbare, transportable Sets, die schnell verladen sind und vor Ort überzeugen.",
+"Designers & Contractors":"Designer & Auftragnehmer","Custom finishes and matched sets for FF&E and OS&E packages.":"Individuelle Oberflächen und abgestimmte Sets für FF&E- und OS&E-Pakete.",
+"How it works":"So funktioniert's","From brief to buffet in three steps.":"Vom Briefing zum Buffet in drei Schritten.",
+"Share your brief":"Briefing senden","Tell us your venue, the style you want and the quantities. Have model codes already? Send them as they are.":"Nennen Sie uns Haus, Stil und Mengen. Sie haben bereits Modellcodes? Senden Sie sie einfach mit.",
+"Get a tailored quote":"Maßgeschneidertes Angebot erhalten","We propose options and quote in baht, with lead times and customisation. Pricing is per project, never a one-size list.":"Wir schlagen Optionen vor und kalkulieren in Baht, inklusive Lieferzeiten und Anpassungen. Die Preise gelten pro Projekt, nie als Einheitsliste.",
+"We source, check, deliver":"Wir beschaffen, prüfen, liefern","We handle manufacturer sourcing, quality checks and logistics, so what arrives is what you approved.":"Wir übernehmen Herstellerbeschaffung, Qualitätskontrolle und Logistik, damit ankommt, was Sie freigegeben haben.",
+"A sourcing partner, not just a price list.":"Ein Beschaffungspartner, nicht nur eine Preisliste.",
+"Depth of range":"Sortimentstiefe","Over 2,600 products across buffet, display, bars, tables and service equipment, so one supplier covers the whole project.":"Über 2.600 Produkte aus Buffet, Display, Bars, Tischen und Serviceausstattung, ein Lieferant für das ganze Projekt.",
+"Quality control":"Qualitätskontrolle","We source from established manufacturers and check quality before goods reach you.":"Wir beziehen von etablierten Herstellern und prüfen die Qualität, bevor die Ware bei Ihnen ankommt.",
+"Local and simple":"Lokal und unkompliziert","Quotes in baht, logistics handled, and a Thai-based team backed by M Hospitality Thailand.":"Angebote in Baht, Logistik inklusive und ein Team in Thailand, getragen von M Hospitality Thailand.",
+"Common questions":"Häufige Fragen",
+"Can I see prices?":"Kann ich Preise sehen?","Pricing, lead times and options are quoted per project, because finishes, quantities and customisation change the price. Send your brief and we reply with a quote in baht.":"Preise, Lieferzeiten und Optionen werden pro Projekt angeboten, da Oberflächen, Mengen und Anpassungen den Preis verändern. Senden Sie uns Ihr Briefing, wir antworten mit einem Angebot in Baht.",
+"How do I order a specific item?":"Wie bestelle ich einen bestimmten Artikel?","Request the catalogue, then send us the model codes and quantities you need. The codes keep every order unambiguous.":"Fordern Sie den Katalog an und senden Sie uns Modellcodes und Mengen. Die Codes machen jede Bestellung eindeutig.",
+"Can you customise sizes, finishes or branding?":"Können Sie Größen, Oberflächen oder Branding anpassen?","Yes. Panels, patterns, top materials, colours and branding can be customised per project, and custom sizes are available on request, especially for buffet stations.":"Ja. Paneele, Muster, Arbeitsplatten, Farben und Branding lassen sich projektbezogen anpassen, Sondergrößen sind auf Anfrage möglich, besonders bei Buffetstationen.",
+"Who do you supply?":"Wen beliefern Sie?","Hotels, restaurants and event companies across Thailand, as well as designers and contractors equipping them.":"Hotels, Restaurants und Eventunternehmen in ganz Thailand sowie Designer und Auftragnehmer, die sie ausstatten.",
+"Who is behind Siam Servewell?":"Wer steht hinter Siam Servewell?","Siam Servewell is a sourcing service by M Hospitality Thailand.":"Siam Servewell ist ein Beschaffungsservice von M Hospitality Thailand.",
+"Let's talk":"Sprechen wir","Tell us about your project.":"Erzählen Sie uns von Ihrem Projekt.","Request a quote for a project, or get the 2026/27 catalogues to browse the full range yourself.":"Fordern Sie ein Angebot für Ihr Projekt an oder erhalten Sie die Kataloge 2026/27, um das gesamte Sortiment selbst zu entdecken.",
+"Email":"E-Mail","Web":"Web","Part of":"Teil von",
+"Request a quote":"Angebot anfragen","Get the catalogue":"Katalog erhalten",
+"Name *":"Name *","Company *":"Unternehmen *","Work email *":"Geschäftliche E-Mail *","Phone / LINE":"Telefon / LINE","I am a":"Ich bin",
+"Hotel or resort":"Hotel oder Resort","Restaurant group":"Restaurantgruppe","Event / catering company":"Event- / Catering-Unternehmen","Designer or contractor":"Designer oder Auftragnehmer","Other":"Sonstiges",
+"I am interested in":"Ich interessiere mich für",
+"Chafing & hot holding":"Chafing & Warmhalten","Buffet display":"Buffet-Display","Serveware & cookware":"Servierware & Kochgeschirr","Live cooking stations":"Live-Cooking-Stationen","Bars & counters":"Bars & Theken","Tables":"Tische","Heat lamps":"Wärmelampen","Trolleys":"Servierwagen",
+"Timeline":"Zeitrahmen","Not sure yet":"Noch unklar","Within 1 month":"Innerhalb von 1 Monat","1 to 3 months":"1 bis 3 Monate","3 to 6 months":"3 bis 6 Monate","6+ months":"Über 6 Monate",
+"Project size":"Projektgröße","Small top-up order":"Kleine Nachbestellung","One venue or event":"Ein Haus oder Event","Several venues / full opening":"Mehrere Häuser / komplette Eröffnung",
+"Project details":"Projektdetails",
+"Send my request":"Anfrage senden","Send me the catalogue":"Katalog zusenden","We reply within one business day. We use your details only to respond to this request.":"Wir antworten innerhalb eines Werktags. Ihre Angaben verwenden wir nur zur Bearbeitung dieser Anfrage.",
+"Your request is ready":"Ihre Anfrage ist fertig","Send it to our team by email, or copy it below.":"Senden Sie sie per E-Mail an unser Team oder kopieren Sie sie unten.","Open in email":"In E-Mail öffnen","Copy text":"Text kopieren","Copied":"Kopiert","Select the text to copy":"Text zum Kopieren markieren",
+"Kitchen & hospitality sourcing · A sourcing service by M Hospitality Thailand":"Küchen- & Hospitality-Beschaffung · Ein Beschaffungsservice von M Hospitality Thailand",
+"© 2026 Siam Servewell. Specifications may vary slightly by production batch.":"© 2026 Siam Servewell. Spezifikationen können je nach Produktionscharge leicht abweichen.",
+"@placeholder:Venue, style, quantities, or model codes if you have them":"Haus, Stil, Mengen oder Modellcodes, falls vorhanden",
+"@title":"Siam Servewell | Buffet-Ausstattung & Live-Cooking-Stationen für Hotels in Thailand",
+"@desc":"Siam Servewell liefert Chafing Dishes, Live-Cooking-Stationen, Buffet-Display, Bars und Servierware an Hotels, Restaurants und Eventunternehmen in ganz Thailand. Angebote in Baht, individuelle Oberflächen, qualitätsgeprüfte Lieferung.",
+"@models":"Modelle","2,600+":"2.600+",
+"@alt:Induction chafing dish with wood-effect base":"Induktions-Chafing-Dish mit Holzoptik-Sockel","@alt:Mobile live cooking station":"Mobile Live-Cooking-Station","@alt:Buffet display risers and stands":"Buffet-Etagèren und Ständer","@alt:Mobile bar counter":"Mobile Bartheke","@alt:Buffet table with glass display":"Buffettisch mit Glasvitrine","@alt:Copper heat lamp":"Wärmelampe in Kupfer","@alt:Wooden crates and serveware":"Holzkisten und Servierware","@alt:Gold service trolley":"Goldener Servierwagen"
+}};
+
+Object.assign(I18N.th,{
+"What You Need":"สิ่งที่คุณต้องการ","Why Us":"ทำไมเลือกเรา",
+"Sourcing partner · Thailand":"พันธมิตรด้านการจัดหา · ประเทศไทย",
+"Your sourcing partner for":"พันธมิตรด้านการจัดหาของคุณสำหรับ","hotels, restaurants and event companies.":"โรงแรม ร้านอาหาร และบริษัทอีเวนต์",
+"We find, quality-check and deliver the buffet, kitchen and service equipment your project needs, across Thailand. One partner, one quote, in baht.":"เราค้นหา ตรวจสอบคุณภาพ และจัดส่งอุปกรณ์บุฟเฟ่ต์ ครัว และงานบริการที่โครงการของคุณต้องการ ทั่วประเทศไทย ผู้ให้บริการรายเดียว ใบเสนอราคาเดียว เป็นเงินบาท",
+"Tell us what you need":"บอกเราว่าคุณต้องการอะไร",
+"Start here":"เริ่มที่นี่","Where are you right now?":"ตอนนี้คุณอยู่ที่จุดไหน?","Choose the closest match and we'll start the inquiry for you.":"เลือกข้อที่ใกล้เคียงที่สุด แล้วเราจะเริ่มคำขอให้คุณ",
+"I'm opening a new hotel or restaurant":"ฉันกำลังเปิดโรงแรมหรือร้านอาหารใหม่","Complete buffet, display and service equipment, matched and quoted as one package.":"อุปกรณ์บุฟเฟ่ต์ อุปกรณ์จัดแสดง และอุปกรณ์บริการครบชุด เข้ากันและเสนอราคาเป็นแพ็กเกจเดียว",
+"I'm renovating or refreshing my buffet":"ฉันกำลังปรับปรุงหรือรีเฟรชบุฟเฟ่ต์","New stations, display and serveware that lift the look without a full rebuild.":"สถานี อุปกรณ์จัดแสดง และภาชนะเสิร์ฟใหม่ ที่ยกระดับลุคโดยไม่ต้องรื้อทั้งหมด",
+"My buffet looks tired or service is slow":"บุฟเฟ่ต์ดูเก่าหรือการบริการช้า","Live cooking, heat holding and display that impress guests and speed up service.":"ไลฟ์คุกกิ้ง การรักษาความร้อน และการจัดแสดงที่สร้างความประทับใจและเพิ่มความเร็วในการบริการ",
+"I run events and catering":"ฉันทำงานอีเวนต์และเคเทอริ่ง","Foldable, transportable stations, tables and bars that load fast and look great on site.":"สถานี โต๊ะ และบาร์แบบพับเก็บขนย้ายง่าย โหลดเร็วและดูดีหน้างาน",
+"I need to replace or top up items":"ฉันต้องการเปลี่ยนหรือเติมสินค้า","Have model codes or a photo? Send them and get a quick quote.":"มีรหัสรุ่นหรือรูปภาพไหม ส่งมาแล้วรับใบเสนอราคาอย่างรวดเร็ว",
+"I need something custom":"ฉันต้องการสินค้าสั่งทำ","Custom stations with your finishes, sizes and branding.":"สถานีสั่งทำตามวัสดุผิว ขนาด และแบรนด์ของคุณ",
+"Something else? Tell us about it.":"เรื่องอื่น? เล่าให้เราฟัง","Something else":"เรื่องอื่น","Choose one":"เลือกหนึ่งข้อ",
+"Equipment for every part of your service.":"อุปกรณ์สำหรับทุกส่วนของงานบริการ",
+"Who we work with":"เราทำงานกับใคร","One sourcing partner, whatever you run.":"พันธมิตรด้านการจัดหารายเดียว ไม่ว่าคุณจะทำธุรกิจแบบไหน","Hotels, restaurants and event companies across Thailand rely on us to find the right equipment and get it delivered.":"โรงแรม ร้านอาหาร และบริษัทอีเวนต์ทั่วประเทศไทยไว้วางใจให้เราหาอุปกรณ์ที่ใช่และจัดส่งถึงที่",
+"How we start":"เริ่มต้นอย่างไร","From your situation to a delivered buffet.":"จากสถานการณ์ของคุณสู่บุฟเฟ่ต์ที่จัดส่งถึงที่",
+"Tell us where you are":"บอกเราว่าคุณอยู่ที่จุดไหน","Share a few details about your project, or send model codes.":"แจ้งรายละเอียดโครงการเล็กน้อย หรือส่งรหัสรุ่นมาได้เลย",
+"We talk it through":"เราคุยรายละเอียดร่วมกัน","A short call or message to understand your venue, style, quantities and budget.":"โทรหรือแชทสั้นๆ เพื่อเข้าใจสถานที่ สไตล์ จำนวน และงบประมาณของคุณ",
+"You get a clear quote":"คุณจะได้ใบเสนอราคาที่ชัดเจน","Options and pricing in baht, with lead times and customisation, before you commit to anything.":"ตัวเลือกและราคาเป็นเงินบาท พร้อมระยะเวลาจัดส่งและการปรับแต่ง ก่อนที่คุณจะตัดสินใจ",
+"Backed by hospitality operators":"หนุนหลังโดยผู้ปฏิบัติงานด้านบริการ","Siam Servewell is a sourcing service by M Hospitality Thailand, a team with experience from five-star hotels to delivery kitchens.":"Siam Servewell เป็นบริการจัดหาสินค้าโดย M Hospitality Thailand ทีมที่มีประสบการณ์ตั้งแต่โรงแรมห้าดาวถึงครัวเดลิเวอรี่","Learn more about M Hospitality Thailand":"รู้จัก M Hospitality Thailand เพิ่มเติม",
+"Share a few details and we'll get back to you. Prefer email? Write to us directly.":"แจ้งรายละเอียดเล็กน้อยแล้วเราจะติดต่อกลับ ชอบอีเมลมากกว่า? เขียนถึงเราได้โดยตรง",
+"Your situation":"สถานการณ์ของคุณ",
+"@title":"Siam Servewell | พันธมิตรด้านการจัดหาสำหรับโรงแรม ร้านอาหาร และบริษัทอีเวนต์ในประเทศไทย",
+"@desc":"Siam Servewell คือพันธมิตรด้านการจัดหาในประเทศไทยสำหรับโรงแรม ร้านอาหาร และบริษัทอีเวนต์ ทั้งสถานีบุฟเฟ่ต์ เครื่องอุ่นอาหาร อุปกรณ์จัดแสดง บาร์ และภาชนะเสิร์ฟ ตรวจสอบคุณภาพ เสนอราคาเป็นเงินบาท และจัดส่งถึงที่"
+});
+Object.assign(I18N.de,{
+"What You Need":"Ihr Bedarf","Why Us":"Warum wir",
+"Sourcing partner · Thailand":"Beschaffungspartner · Thailand",
+"Your sourcing partner for":"Ihr Beschaffungspartner für","hotels, restaurants and event companies.":"Hotels, Restaurants und Eventunternehmen.",
+"We find, quality-check and deliver the buffet, kitchen and service equipment your project needs, across Thailand. One partner, one quote, in baht.":"Wir finden, prüfen und liefern die Buffet-, Küchen- und Serviceausstattung, die Ihr Projekt braucht, in ganz Thailand. Ein Partner, ein Angebot, in Baht.",
+"Tell us what you need":"Sagen Sie uns, was Sie brauchen",
+"Start here":"Hier starten","Where are you right now?":"Wo stehen Sie gerade?","Choose the closest match and we'll start the inquiry for you.":"Wählen Sie das Passendste, wir starten die Anfrage für Sie.",
+"I'm opening a new hotel or restaurant":"Ich eröffne ein neues Hotel oder Restaurant","Complete buffet, display and service equipment, matched and quoted as one package.":"Komplette Buffet-, Display- und Serviceausstattung, aufeinander abgestimmt und als ein Paket angeboten.",
+"I'm renovating or refreshing my buffet":"Ich renoviere oder erneuere mein Buffet","New stations, display and serveware that lift the look without a full rebuild.":"Neue Stationen, Display und Servierware, die den Auftritt aufwerten, ohne alles neu zu bauen.",
+"My buffet looks tired or service is slow":"Mein Buffet wirkt in die Jahre gekommen oder der Service ist langsam","Live cooking, heat holding and display that impress guests and speed up service.":"Live Cooking, Warmhalten und Display, die Gäste beeindrucken und den Service beschleunigen.",
+"I run events and catering":"Ich organisiere Events und Catering","Foldable, transportable stations, tables and bars that load fast and look great on site.":"Klappbare, transportable Stationen, Tische und Bars, die schnell verladen sind und vor Ort überzeugen.",
+"I need to replace or top up items":"Ich brauche Ersatz oder Nachbestellungen","Have model codes or a photo? Send them and get a quick quote.":"Sie haben Modellcodes oder ein Foto? Senden Sie sie und erhalten Sie schnell ein Angebot.",
+"I need something custom":"Ich brauche eine Sonderanfertigung","Custom stations with your finishes, sizes and branding.":"Individuelle Stationen mit Ihren Oberflächen, Größen und Ihrem Branding.",
+"Something else? Tell us about it.":"Etwas anderes? Erzählen Sie uns davon.","Something else":"Etwas anderes","Choose one":"Bitte wählen",
+"Equipment for every part of your service.":"Ausstattung für jeden Bereich Ihres Services.",
+"Who we work with":"Mit wem wir arbeiten","One sourcing partner, whatever you run.":"Ein Beschaffungspartner, was auch immer Sie betreiben.","Hotels, restaurants and event companies across Thailand rely on us to find the right equipment and get it delivered.":"Hotels, Restaurants und Eventunternehmen in ganz Thailand verlassen sich darauf, dass wir die passende Ausstattung finden und liefern.",
+"How we start":"So starten wir","From your situation to a delivered buffet.":"Von Ihrer Situation zum gelieferten Buffet.",
+"Tell us where you are":"Sagen Sie uns, wo Sie stehen","Share a few details about your project, or send model codes.":"Teilen Sie ein paar Details zu Ihrem Projekt mit oder senden Sie Modellcodes.",
+"We talk it through":"Wir besprechen es gemeinsam","A short call or message to understand your venue, style, quantities and budget.":"Ein kurzes Gespräch oder eine Nachricht, um Haus, Stil, Mengen und Budget zu verstehen.",
+"You get a clear quote":"Sie erhalten ein klares Angebot","Options and pricing in baht, with lead times and customisation, before you commit to anything.":"Optionen und Preise in Baht, mit Lieferzeiten und Anpassungen, bevor Sie sich festlegen.",
+"Backed by hospitality operators":"Getragen von Hospitality-Praktikern","Siam Servewell is a sourcing service by M Hospitality Thailand, a team with experience from five-star hotels to delivery kitchens.":"Siam Servewell ist ein Beschaffungsservice von M Hospitality Thailand, einem Team mit Erfahrung von Fünf-Sterne-Hotels bis zu Delivery-Küchen.","Learn more about M Hospitality Thailand":"Mehr über M Hospitality Thailand",
+"Share a few details and we'll get back to you. Prefer email? Write to us directly.":"Teilen Sie ein paar Details mit, wir melden uns. Lieber per E-Mail? Schreiben Sie uns direkt.",
+"Your situation":"Ihre Situation",
+"@title":"Siam Servewell | Ihr Beschaffungspartner für Hotels, Restaurants und Eventunternehmen in Thailand",
+"@desc":"Siam Servewell ist Ihr Beschaffungspartner in Thailand für Hotels, Restaurants und Eventunternehmen: Buffetstationen, Chafing Dishes, Display, Bars und Servierware, qualitätsgeprüft, in Baht angeboten und geliefert."
+});
+
+var LANGS=['en','th','de'];
+function norm(t){return t.replace(/\s+/g,' ').trim()}
+function tr(en,lang){
+  lang=lang||CUR; if(lang==='en')return en;
+  var d=I18N[lang]||{}; if(d[en])return d[en];
+  var m=/^(\d+\+) models$/.exec(en); if(m)return m[1]+' '+d['@models'];
+  return en;
+}
+var CUR='en';
+var ORIG_TITLE=document.title, ORIG_DESC=(document.querySelector('meta[name=description]')||{}).content||'';
+function applyLang(lang){
+  CUR=lang; document.documentElement.lang=lang;
+  var els=document.body.getElementsByTagName('*');
+  for(var i=0;i<els.length;i++){
+    var el=els[i];
+    if(el.children.length||el.tagName==='SCRIPT'||el.tagName==='STYLE'||el.dataset.noi)continue;
+    if(el.tagName==='TEXTAREA'){
+      if(el.dataset.enPh===undefined)el.dataset.enPh=el.getAttribute('placeholder')||'';
+      var d=I18N[lang]||{}; el.setAttribute('placeholder',lang==='en'?el.dataset.enPh:(d['@placeholder:'+el.dataset.enPh]||el.dataset.enPh));
+      continue;
+    }
+    if(el.tagName==='IMG'){
+      if(el.dataset.enAlt===undefined)el.dataset.enAlt=el.getAttribute('alt')||'';
+      var dd=I18N[lang]||{}; el.setAttribute('alt',lang==='en'?el.dataset.enAlt:(dd['@alt:'+el.dataset.enAlt]||el.dataset.enAlt));
+      continue;
+    }
+    if(el.tagName==='INPUT'||el.tagName==='BR')continue;
+    if(el.dataset.en===undefined){var t=norm(el.textContent); if(!t)continue; el.dataset.en=t;}
+    el.textContent=tr(el.dataset.en,lang);
+  }
+  var D=I18N[lang]||{};
+  document.title=lang==='en'?ORIG_TITLE:D['@title'];
+  var md=document.querySelector('meta[name=description]'); if(md)md.content=lang==='en'?ORIG_DESC:D['@desc'];
+  var bs=document.querySelectorAll('.lang button');
+  for(var j=0;j<bs.length;j++){var on=bs[j].dataset.lang===lang;bs[j].classList.toggle('on',on);bs[j].setAttribute('aria-pressed',on)}
+  try{localStorage.setItem('sb-lang',lang)}catch(e){}
+}
+function initLang(){
+  var l=null; try{l=localStorage.getItem('sb-lang')}catch(e){}
+  if(LANGS.indexOf(l)<0){var n=(navigator.language||'en').slice(0,2).toLowerCase(); l=LANGS.indexOf(n)>=0?n:'en'}
+  var sel=document.querySelectorAll('select option');
+  for(var i=0;i<sel.length;i++){sel[i].value=norm(sel[i].textContent)}
+  applyLang(l);
+}
+(function(){
+  var mode='quote';
+  var $=function(id){return document.getElementById(id)};
+  var menu=$('menu');
+  $('burger').onclick=function(){menu.classList.toggle('open')};
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
+
+  function setMode(m){
+    mode=m;
+    $('tab-quote').classList.toggle('on',m==='quote');
+    $('tab-cat').classList.toggle('on',m==='catalogue');
+    $('quoteOnly').classList.toggle('hide',m==='catalogue');
+    var sb=$('submit'); sb.dataset.en=m==='quote'?'Send my request':'Send me the catalogue'; sb.textContent=tr(sb.dataset.en);
+  }
+  $('tab-quote').onclick=function(){setMode('quote')};
+  $('tab-cat').onclick=function(){setMode('catalogue')};
+
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a');
+    if(!a)return;
+    if(a.dataset.tab){setMode(a.dataset.tab)}
+    if(a.dataset.sit){setMode('quote');$('sit').value=a.dataset.sit}
+    if(a.dataset.need){
+      setMode('quote');
+      var boxes=document.querySelectorAll('#chips input');
+      for(var i=0;i<boxes.length;i++){if(boxes[i].value===a.dataset.need)boxes[i].checked=true}
+    }
+  });
+
+  $('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var req=['name','company','email'],ok=true;
+    req.forEach(function(id){
+      var el=$(id),bad=!el.value.trim()||(id==='email'&&!/^\S+@\S+\.\S+$/.test(el.value));
+      el.style.borderColor=bad?'#b3261e':'';
+      if(bad)ok=false;
+    });
+    if(!ok)return;
+    var picks=[].map.call(document.querySelectorAll('#chips input:checked'),function(x){return x.value});
+    var lines=[];
+    lines.push(mode==='quote'?'Quote request (siamservewell.com)':'Catalogue request (siamservewell.com)');
+    lines.push('Name: '+$('name').value.trim());
+    lines.push('Company: '+$('company').value.trim()+' ('+$('type').value+')');
+    lines.push('Situation: '+($('sit').value==='Choose one'?'Not specified':$('sit').value));
+    lines.push('Email: '+$('email').value.trim());
+    if($('phone').value.trim())lines.push('Phone / LINE: '+$('phone').value.trim());
+    lines.push('Interested in: '+(picks.length?picks.join(', '):'Full range'));
+    if(mode==='quote'){
+      lines.push('Timeline: '+$('when').value);
+      if($('msg').value.trim())lines.push('Details: '+$('msg').value.trim());
+    }else{
+      lines.push('Please send: Kitchen & Buffet Equipment Catalogue 2026/27 and Buffet Station Catalogue 2026/27');
+    }
+    var text=lines.join('\n');
+    var subject=mode==='quote'?'Quote request - '+$('company').value.trim():'Catalogue request - '+$('company').value.trim();
+    $('out').textContent=text;
+    $('mail').href='mailto:siamservewell@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(text);
+    $('form').classList.add('hide');
+    $('done').classList.remove('hide');
+  });
+  document.querySelector('.lang').addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    var mm=mode; applyLang(b.dataset.lang); var sb=$('submit'); sb.dataset.en=mm==='quote'?'Send my request':'Send me the catalogue'; sb.textContent=tr(sb.dataset.en);
+  });
+  initLang(); setMode(mode);
+  $('copy').onclick=function(){
+    var b=this;
+    try{navigator.clipboard.writeText($('out').textContent).then(function(){b.textContent=tr('Copied')})}catch(err){b.textContent=tr('Select the text to copy')}
+  };
+})();
+</script>
+</body>
+</html>
